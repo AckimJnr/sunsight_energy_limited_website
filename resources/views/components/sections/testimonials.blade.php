@@ -1,62 +1,106 @@
 {{-- ── Testimonials + Statistics Section ───────────────────────────────────── --}}
-<section class="bg-neutral-900 dark:bg-neutral-950 py-16 lg:py-20">
-    <div class="mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8">
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    {{-- Container for the testimonials --}}
+    <div class="lg:grid lg:grid-cols-12 lg:items-center lg:justify-between lg:gap-16">
+        <div class="lg:col-span-5 lg:col-start-1">
+            {{-- Title and Subtitle --}}
+            <div class="mb-8">
+                <h2 class="mb-2 text-3xl font-bold text-neutral-800 lg:text-4xl dark:text-neutral-200">
+                    Real Savings. Real People.
+                </h2>
+                <p class="text-neutral-600 dark:text-neutral-400">
+                    Thousands of SunSight customers are already enjoying lower energy bills and a greener future. Here's what they have to say.
+                </p>
+            </div>
 
-        <div class="text-center">
-            <h2 class="text-3xl font-bold text-neutral-100 sm:text-4xl">Real Savings. Real People.</h2>
-            <p class="mt-3 text-neutral-400">
-                Thousands of SunSight customers are already enjoying lower energy bills and a greener future. Here's what they have to say.
-            </p>
-        </div>
-
-        {{-- Testimonial card --}}
-        <div class="mx-auto mt-10 max-w-3xl">
-            <div class="relative rounded-2xl bg-neutral-800 p-8 shadow-xl ring-1 ring-neutral-700 lg:p-10">
-                {{-- Quote mark --}}
-                <svg class="absolute top-6 left-6 h-10 w-10 text-yellow-500/30" fill="currentColor" viewBox="0 0 32 32">
-                    <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
+            {{-- Testimonial blockquote --}}
+            <blockquote class="relative">
+                <svg
+                    class="absolute top-0 start-0 transform -translate-x-6 -translate-y-8 size-16 text-neutral-300/60 dark:text-neutral-700/60"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.16065 12.6533 5.54346 12.89 4.79982 12.89C4.00282 12.89 3.32557 12.6133 2.76807 12.06C2.21695 11.5067 1.94139 10.74 1.94139 9.76C1.94139 8.66667 2.30409 7.46667 3.02949 6.16C3.76126 4.84667 4.88856 3.73333 6.41139 2.82L7.39762 4.14C6.26475 4.88667 5.48003 5.68667 5.04346 6.54C4.61326 7.39333 4.41409 8.24667 4.44592 9.1C4.66555 8.94 4.93798 8.86 5.26322 8.86C5.89555 8.86 6.41798 9.07333 6.83052 9.5C7.24943 9.92 7.39762 10.3 7.39762 10.3ZM14.6024 10.3C14.6024 11.0733 14.3536 11.7 13.8561 12.18C13.3654 12.6533 12.7482 12.89 12.0045 12.89C11.2076 12.89 10.5303 12.6133 9.97282 12.06C9.4217 11.5067 9.14614 10.74 9.14614 9.76C9.14614 8.66667 9.50884 7.46667 10.2342 6.16C10.966 4.84667 12.0933 3.73333 13.6161 2.82L14.6024 4.14C13.4695 4.88667 12.6848 5.68667 12.2482 6.54C11.818 7.39333 11.6188 8.24667 11.6507 9.1C11.8703 8.94 12.1427 8.86 12.468 8.86C13.1003 8.86 13.6227 9.07333 14.0353 9.5C14.4542 9.92 14.6024 10.3 14.6024 10.3Z"
+                        fill="currentColor"
+                    />
                 </svg>
-                <blockquote class="relative mt-4">
-                    <p class="text-lg leading-relaxed text-neutral-300 italic">
+
+                <div class="relative z-10">
+                    <p class="text-xl text-neutral-800 italic dark:text-neutral-200">
                         "Switching to SunSight was the best home investment we have ever made. Our electricity bill dropped by 80% in the first month, and the installation team was professional, fast, and incredibly tidy. Highly recommend!"
                     </p>
-                </blockquote>
-                <div class="mt-6 flex items-center gap-4">
-                    <img
-                        src="https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=200&auto=format&fit=facearea&facepad=2"
-                        alt="Margaret Collins"
-                        class="h-12 w-12 rounded-full object-cover ring-2 ring-yellow-500"
-                    >
-                    <div>
-                        <p class="font-semibold text-neutral-100">Margaret Collins</p>
-                        <p class="text-sm text-neutral-400">Homeowner &mdash; Cape Town</p>
-                    </div>
-                    {{-- Star rating --}}
-                    <div class="ml-auto flex gap-0.5">
-                        @for ($i = 0; $i < 5; $i++)
-                            <svg class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                        @endfor
+                </div>
+
+                <div class="mt-6">
+                    <div class="flex items-center">
+                        <div class="shrink-0">
+                            <img
+                                class="h-8 w-8 rounded-full object-cover"
+                                src="https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                                alt="Margaret Collins avatar"
+                                loading="eager"
+                            >
+                        </div>
+                        <div class="ms-4 grow">
+                            <div class="font-bold text-neutral-800 dark:text-neutral-200">
+                                Margaret Collins
+                            </div>
+                            <div class="text-xs text-neutral-500">Homeowner | Cape Town</div>
+                        </div>
                     </div>
                 </div>
+            </blockquote>
+        </div>
+
+        {{-- Statistics column --}}
+        <div class="mt-10 lg:col-span-6 lg:col-end-13 lg:mt-0">
+            <div class="space-y-6 sm:space-y-8">
+                <ul class="grid grid-cols-2 divide-x-2 divide-y-2 divide-neutral-300 overflow-hidden dark:divide-neutral-700">
+                    <li class="-m-0.5 flex flex-col p-4 sm:p-8">
+                        <div class="mb-2 flex items-end gap-x-2 text-3xl font-bold text-neutral-800 sm:text-5xl dark:text-neutral-200">
+                            3,200+
+                        </div>
+                        <p class="text-sm text-neutral-600 sm:text-base dark:text-neutral-400">
+                            homes and businesses powered by SunSight solar systems
+                        </p>
+                    </li>
+                    <li class="-m-0.5 flex flex-col p-4 sm:p-8">
+                        <div class="mb-2 flex items-end gap-x-2 text-3xl font-bold text-neutral-800 sm:text-5xl dark:text-neutral-200">
+                            <svg class="h-6 w-6 text-yellow-500 self-center" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"/>
+                            </svg>
+                            80%
+                        </div>
+                        <p class="text-sm text-neutral-600 sm:text-base dark:text-neutral-400">
+                            average reduction in electricity bills reported by our customers
+                        </p>
+                    </li>
+                    <li class="-m-0.5 flex flex-col p-4 sm:p-8">
+                        <div class="mb-2 flex items-end gap-x-2 text-3xl font-bold text-neutral-800 sm:text-5xl dark:text-neutral-200">
+                            <svg class="h-6 w-6 text-yellow-500 self-center" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"/>
+                            </svg>
+                            25yr
+                        </div>
+                        <p class="text-sm text-neutral-600 sm:text-base dark:text-neutral-400">
+                            performance warranty on all SunSight solar panels
+                        </p>
+                    </li>
+                    <li class="-m-0.5 flex flex-col p-4 sm:p-8">
+                        <div class="mb-2 flex items-end gap-x-2 text-3xl font-bold text-neutral-800 sm:text-5xl dark:text-neutral-200">
+                            4–6 wks
+                        </div>
+                        <p class="text-sm text-neutral-600 sm:text-base dark:text-neutral-400">
+                            average time from quote to fully operational solar system
+                        </p>
+                    </li>
+                </ul>
             </div>
         </div>
-
-        {{-- Statistics grid --}}
-        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            @foreach ([
-                ['count' => '3,200+',  'description' => 'homes and businesses powered by SunSight solar systems'],
-                ['count' => '80%',     'description' => 'average reduction in electricity bills reported by our customers'],
-                ['count' => '25yr',    'description' => 'performance warranty on all SunSight solar panels'],
-                ['count' => '4–6 wks', 'description' => 'average time from quote to fully operational solar system'],
-            ] as $stat)
-                <div class="rounded-xl bg-neutral-800 p-6 text-center ring-1 ring-neutral-700 hover:ring-yellow-500/40 transition-all duration-300">
-                    <p class="text-4xl font-extrabold text-yellow-400">{{ $stat['count'] }}</p>
-                    <p class="mt-2 text-sm text-neutral-400">{{ $stat['description'] }}</p>
-                </div>
-            @endforeach
-        </div>
-
     </div>
 </section>

@@ -1,32 +1,31 @@
 {{-- ── Features General Section ─────────────────────────────────────────────── --}}
-<section id="features" class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-16 2xl:max-w-full">
+<section id="features" class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
 
-    {{-- Feature image --}}
-    <div class="relative mb-8 overflow-hidden rounded-2xl shadow-xl">
+    {{-- Block to display the feature image --}}
+    <div class="relative mb-6 overflow-hidden md:mb-8">
         <img
             src="{{ asset('images/features-image.avif') }}"
             alt="SunSight Energy solar panel system on a residential rooftop"
             class="h-full w-full object-cover object-center"
             loading="eager"
         >
-        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/50 to-transparent"></div>
     </div>
 
-    {{-- Title + Feature blocks --}}
-    <div class="mt-10 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-12">
-        {{-- Title column --}}
+    {{-- Displaying the main content consisting of title, subtitle, and several IconBlock components --}}
+    <div class="mt-5 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-12">
+        {{-- Block for title and subtitle --}}
         <div class="lg:col-span-1">
             <h2 class="text-2xl font-bold text-balance text-neutral-800 md:text-3xl dark:text-neutral-200">
                 Solar Solutions Built Around You
             </h2>
-            <p class="mt-3 text-pretty text-neutral-600 md:mt-4 dark:text-neutral-400">
+            <p class="mt-2 text-pretty text-neutral-600 md:mt-4 dark:text-neutral-400">
                 At SunSight Energy, we make the transition to solar simple, affordable, and rewarding. From bespoke system design to smart monitoring and ongoing support, we're with you every step of the way.
             </p>
         </div>
 
-        {{-- Feature grid --}}
+        {{-- Block to display the IconBlock components --}}
         <div class="lg:col-span-2">
-            <div class="grid gap-8 sm:grid-cols-2 md:gap-10">
+            <div class="grid gap-8 sm:grid-cols-2 md:gap-12">
 
                 @foreach ([
                     [
@@ -50,15 +49,15 @@
                         'content' => 'Our sleek, low-profile solar systems complement your property\'s aesthetics while future-proofing your home with battery storage and EV charger compatibility.',
                     ],
                 ] as $feature)
-                    <div class="flex gap-4">
-                        <div class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-yellow-100 dark:bg-yellow-900/40">
-                            <svg class="h-5 w-5 text-yellow-600 dark:text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <div class="flex gap-x-5">
+                        <div class="shrink-0">
+                            <svg class="h-8 w-8 text-yellow-500 dark:text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                 {!! $feature['icon'] !!}
                             </svg>
                         </div>
-                        <div>
-                            <h3 class="font-semibold text-neutral-800 dark:text-neutral-200">{{ $feature['heading'] }}</h3>
-                            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">{{ $feature['content'] }}</p>
+                        <div class="grow">
+                            <h3 class="text-balance text-lg font-bold text-neutral-800 dark:text-neutral-200">{{ $feature['heading'] }}</h3>
+                            <p class="mt-1 text-pretty text-neutral-700 dark:text-neutral-300">{{ $feature['content'] }}</p>
                         </div>
                     </div>
                 @endforeach

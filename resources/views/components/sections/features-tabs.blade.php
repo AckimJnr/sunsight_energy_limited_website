@@ -1,15 +1,15 @@
 {{-- ── Features Tabs Section ────────────────────────────────────────────────── --}}
-<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-16 2xl:max-w-full">
-    <div class="relative rounded-2xl bg-neutral-100 p-6 dark:bg-white/[.075] md:p-14">
-        <div class="relative z-10 lg:grid lg:grid-cols-12 lg:items-start lg:gap-16">
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <div class="relative p-6 md:p-16">
+        <div class="relative z-10 lg:grid lg:grid-cols-12 lg:items-center lg:gap-16">
 
-            {{-- Tab nav column (right on lg) --}}
-            <div class="mb-10 lg:order-2 lg:col-span-6 lg:col-start-7 lg:mb-0">
+            {{-- Section's heading and tab navigation (right on lg) --}}
+            <div class="mb-10 lg:order-2 lg:col-span-6 lg:col-start-8 lg:mb-0">
                 <h2 class="text-2xl font-bold text-neutral-800 sm:text-3xl dark:text-neutral-200">
                     Discover how <span class="text-yellow-500 dark:text-yellow-400">SunSight Energy</span> tailors every solar solution to your unique needs.
                 </h2>
 
-                <nav class="mt-6 grid gap-3 md:mt-10" aria-label="Feature tabs" role="tablist">
+                <nav class="mt-5 grid gap-4 md:mt-10" aria-label="Tabs" role="tablist">
 
                     @foreach ([
                         [
@@ -34,46 +34,75 @@
                             role="tab"
                             aria-selected="{{ $index === 0 ? 'true' : 'false' }}"
                             aria-controls="tab-panel-{{ $index }}"
-                            class="tab-nav-btn group flex cursor-pointer items-start gap-4 rounded-xl p-4 text-left transition-all duration-200 hover:bg-white/80 dark:hover:bg-neutral-700/50"
+                            class="tab-nav-btn {{ $index === 0 ? 'active ' : '' }}dark:hover:bg-neutral-700 rounded-xl p-4 text-start outline-hidden ring-zinc-500 transition duration-300 hover:bg-neutral-200 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden md:p-5"
                         >
-                            <div class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-yellow-100 group-[.active]:bg-yellow-500 dark:bg-yellow-900/30 dark:group-[.active]:bg-yellow-500 transition-colors">
-                                <svg class="h-5 w-5 text-yellow-600 group-[.active]:text-white dark:text-yellow-400 dark:group-[.active]:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <span class="flex">
+                                <svg class="h-8 w-8 text-yellow-500 dark:text-yellow-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     {!! $tab['icon'] !!}
                                 </svg>
-                            </div>
-                            <div>
-                                <h3 class="tab-heading font-semibold text-neutral-700 dark:text-neutral-300">{{ $tab['heading'] }}</h3>
-                                <p class="mt-1 text-sm text-neutral-500 dark:text-neutral-400">{{ $tab['content'] }}</p>
-                            </div>
+                                <span class="ms-6 grow">
+                                    <span class="tab-heading block text-lg font-bold text-neutral-800 dark:text-neutral-200">{{ $tab['heading'] }}</span>
+                                    <span class="tab-content mt-1 block text-neutral-500 dark:text-neutral-400">{{ $tab['content'] }}</span>
+                                </span>
+                            </span>
                         </button>
                     @endforeach
 
                 </nav>
             </div>
 
-            {{-- Tab image panels (left on lg) --}}
+            {{-- Contents for each tab (left on lg) --}}
             <div class="lg:col-span-6">
-                @foreach ([
-                    ['src' => 'automated-tools.avif', 'alt' => 'Solar panels on a rooftop catching sunlight'],
-                    ['src' => 'dashboard-image.avif',  'alt' => 'Smart energy monitoring dashboard on a tablet screen'],
-                    ['src' => 'construction-image.avif','alt' => 'Home battery storage unit installed in a garage'],
-                ] as $index => $panel)
-                    <div
-                        id="tab-panel-{{ $index }}"
-                        role="tabpanel"
-                        aria-labelledby="tab-btn-{{ $index }}"
-                        class="tab-panel overflow-hidden rounded-2xl shadow-lg"
-                    >
-                        <img
-                            src="{{ asset('images/' . $panel['src']) }}"
-                            alt="{{ $panel['alt'] }}"
-                            class="h-full w-full object-cover object-center"
-                            loading="lazy"
+                <div class="relative">
+                    <div>
+                        <div
+                            id="tab-panel-0"
+                            role="tabpanel"
+                            aria-labelledby="tab-btn-0"
+                            class="tab-panel active"
                         >
+                            <img
+                                src="{{ asset('images/automated-tools.avif') }}"
+                                alt="Solar panels on a rooftop catching sunlight"
+                                class="shadow-xl aspect-video object-cover lg:aspect-square shadow-neutral-200 rounded-xl dark:shadow-neutral-900/[.2] w-full"
+                                loading="eager"
+                            >
+                        </div>
+                        <div
+                            id="tab-panel-1"
+                            role="tabpanel"
+                            aria-labelledby="tab-btn-1"
+                            class="tab-panel"
+                        >
+                            <img
+                                src="{{ asset('images/dashboard-image.avif') }}"
+                                alt="Smart energy monitoring dashboard on a tablet screen"
+                                class="shadow-xl aspect-video object-contain bg-neutral-300 dark:bg-neutral-600 p-3 lg:object-cover lg:aspect-square shadow-neutral-200 rounded-xl dark:shadow-neutral-900/[.2] w-full"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div
+                            id="tab-panel-2"
+                            role="tabpanel"
+                            aria-labelledby="tab-btn-2"
+                            class="tab-panel"
+                        >
+                            <img
+                                src="{{ asset('images/construction-image.avif') }}"
+                                alt="Home battery storage unit installed in a garage"
+                                class="shadow-xl aspect-video object-cover lg:aspect-square shadow-neutral-200 rounded-xl dark:shadow-neutral-900/[.2] w-full"
+                                loading="lazy"
+                            >
+                        </div>
                     </div>
-                @endforeach
+                </div>
             </div>
 
+        </div>
+
+        {{-- Decorative background and sizing --}}
+        <div class="absolute inset-0 grid h-full w-full grid-cols-12 pointer-events-none">
+            <div class="col-span-full h-5/6 w-full rounded-xl bg-neutral-100 sm:h-3/4 lg:col-span-7 lg:col-start-6 lg:h-full dark:bg-white/[.075]"></div>
         </div>
     </div>
 </section>

@@ -24,13 +24,15 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 antialiased">
+<body class="flex min-h-screen flex-col bg-neutral-200 selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800 antialiased">
 
-    @include('components.navbar')
+    <div class="mx-auto w-full max-w-[85rem] grow px-4 sm:px-6 lg:px-8 2xl:max-w-full">
+        @include('components.navbar')
 
-    <main>
-        @yield('content')
-    </main>
+        <main>
+            @yield('content')
+        </main>
+    </div>
 
     @include('components.footer')
 

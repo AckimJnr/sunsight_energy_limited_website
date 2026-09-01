@@ -21,7 +21,7 @@
 
 /* ── Tab nav active state ──────────────────────────────────────────── */
 .tab-nav-btn.active {
-    @apply bg-white dark:bg-neutral-700 shadow-sm;
+    @apply bg-neutral-100 dark:bg-neutral-700 shadow-xs;
 }
 .tab-nav-btn.active .tab-heading {
     @apply text-neutral-900 dark:text-white;
@@ -29,14 +29,12 @@
 
 /* ── Announcement banner transition ───────────────────────────────── */
 #announcement-banner {
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    max-height: 200px;
-    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 #announcement-banner.hidden-banner {
-    max-height: 0;
     opacity: 0;
     pointer-events: none;
+    transform: translate(-50%, 100%);
 }
 
 /* ── FAQ accordion ─────────────────────────────────────────────────── */
@@ -47,12 +45,6 @@
 }
 .faq-answer.open {
     max-height: 600px;
-}
-.faq-chevron {
-    transition: transform 0.3s ease;
-}
-.faq-item.open .faq-chevron {
-    transform: rotate(180deg);
 }
 
 /* ── Partner logos – neutral in light, slightly brighter in dark ──── */

@@ -112,11 +112,24 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close all others
             document.querySelectorAll('.faq-item.open').forEach((openItem) => {
                 openItem.classList.remove('open');
-                openItem.querySelector('.faq-answer').classList.remove('open');
+                openItem.querySelector('.faq-answer')?.classList.remove('open');
+                const t = openItem.querySelector('.faq-trigger');
+                if (t) {
+                    t.setAttribute('aria-expanded', 'false');
+                    const inactiveIcon = t.querySelector('.faq-icon-inactive');
+                    const activeIcon = t.querySelector('.faq-icon-active');
+                    if (inactiveIcon) { inactiveIcon.classList.remove('hidden'); inactiveIcon.classList.add('block'); }
+                    if (activeIcon) { activeIcon.classList.add('hidden'); activeIcon.classList.remove('block'); }
+                }
             });
             if (!isOpen) {
                 item.classList.add('open');
                 answer.classList.add('open');
+                trigger.setAttribute('aria-expanded', 'true');
+                const inactiveIcon = trigger.querySelector('.faq-icon-inactive');
+                const activeIcon = trigger.querySelector('.faq-icon-active');
+                if (inactiveIcon) { inactiveIcon.classList.add('hidden'); inactiveIcon.classList.remove('block'); }
+                if (activeIcon) { activeIcon.classList.remove('hidden'); activeIcon.classList.add('block'); }
             }
         });
     });
