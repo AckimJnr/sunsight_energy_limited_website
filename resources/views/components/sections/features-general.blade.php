@@ -1,4 +1,5 @@
 {{-- ── Features General Section ─────────────────────────────────────────────── --}}
+<div class="w-full bg-neutral-50 dark:bg-neutral-900">
 <section id="features" class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
 
     {{-- Block to display the feature image --}}
@@ -16,11 +17,14 @@
         {{-- Block for title and subtitle --}}
         <div class="lg:col-span-1">
             <h2 class="text-2xl font-bold text-balance text-neutral-800 md:text-3xl dark:text-neutral-200">
-                Solar Solutions Built Around You
+                Our services
             </h2>
             <p class="mt-2 text-pretty text-neutral-600 md:mt-4 dark:text-neutral-400">
-                At SunSight Energy, we make the transition to solar simple, affordable, and rewarding. From bespoke system design to smart monitoring and ongoing support, we're with you every step of the way.
+               We offer comprehensive solar energy solutions for residential, commercial, and industrial applications.
             </p>
+            <a href="{{ url('/get-a-free-quote') }}" class="mt-4 inline-block rounded-lg bg-yellow-500 px-4 py-2 text-sm font-medium text-white hover:bg-yellow-600 focus:outline-none focus:ring-3 focus:ring-yellow-300 dark:bg-yellow-400 dark:text-white dark:hover:bg-yellow-500 dark:focus:ring-yellow-200">
+                Get a Free Quote
+            </a>
         </div>
 
         {{-- Block to display the IconBlock components --}}
@@ -66,3 +70,4 @@
         </div>
     </div>
 </section>
+</div>

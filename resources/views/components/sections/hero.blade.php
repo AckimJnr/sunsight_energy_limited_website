@@ -13,7 +13,7 @@
         {{-- Action Button Section: PrimaryCTA and SecondaryCTA --}}
         <div class="mt-7 grid w-full gap-3 sm:inline-flex">
             <a
-                href="{{ url('/contact') }}"
+                href="{{ url('/get-a-free-quote') }}"
                 id="hero-primary-cta"
                 class="group inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-yellow-500 px-4 py-3 text-sm font-bold text-neutral-900 ring-zinc-500 transition duration-300 hover:bg-yellow-400 focus-visible:ring-3 outline-hidden active:bg-yellow-500 2xl:text-base dark:ring-zinc-200 dark:focus:outline-hidden"
             >
@@ -32,6 +32,7 @@
         </div>
 
         {{-- Review Section --}}
+        <!--
         <div class="mt-6 flex sm:items-center gap-x-2 sm:gap-x-5">
             <div class="flex -space-x-2">
                 @foreach ([
@@ -43,6 +44,7 @@
                     <img src="{{ $avatar }}" alt="Happy customer avatar" class="inline-block size-8 rounded-full ring-2 ring-white dark:ring-neutral-900 object-cover">
                 @endforeach
             </div>
+        
             <div class="text-sm font-bold text-neutral-800 dark:text-neutral-200">
                 <div class="flex items-center gap-x-1">
                     @for ($i = 0; $i < 5; $i++)
@@ -56,14 +58,18 @@
                     From Over <span class="font-bold">3,200</span> Happy Customers
                 </div>
             </div>
+
         </div>
+
+-->
+
     </div>
 
     {{-- Hero Image Section --}}
     <div class="flex w-full">
         <div class="top-12 overflow-hidden">
             <img
-                src="{{ asset('images/hero-image.avif') }}"
+                src="{{ asset('images/services/home.png') }}"
                 alt="Solar panels installed on a modern home rooftop under a bright sunny sky"
                 class="h-full w-full scale-110 object-cover object-center"
                 loading="eager"

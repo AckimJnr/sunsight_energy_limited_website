@@ -7,7 +7,7 @@
         <div class="flex items-center justify-between">
             {{-- Brand --}}
             <a href="{{ url('/') }}" class="flex items-center rounded-lg ring-zinc-500 outline-hidden focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden" aria-label="SunSight Energy">
-                <img src="{{ asset('images/logoblue.png') }}" alt="SunSight Energy" class="h-10 w-auto object-contain md:h-12 py-1">
+                <img src="{{ asset('images/logoblue.png') }}" alt="SunSight Energy" class="h-12 w-auto object-contain md:h-12 py-1">
             </a>
 
             {{-- Mobile controls --}}
@@ -40,10 +40,11 @@
         <div id="navbar-menu" class="hidden grow basis-full overflow-hidden transition-all duration-300 md:block" data-open="false">
             <div class="mt-5 flex flex-col gap-x-0 gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 md:gap-y-0 md:ps-7 lg:gap-x-7">
                 <a href="{{ url('/') }}" class="rounded-lg text-base font-medium text-neutral-600 outline-hidden ring-zinc-500 hover:text-neutral-500 focus-visible:ring-3 md:py-3 md:text-sm 2xl:text-base dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">Home</a>
-                <a href="#features" class="rounded-lg text-base font-medium text-neutral-600 outline-hidden ring-zinc-500 hover:text-neutral-500 focus-visible:ring-3 md:py-3 md:text-sm 2xl:text-base dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">Features</a>
-                <a href="#pricing" class="rounded-lg text-base font-medium text-neutral-600 outline-hidden ring-zinc-500 hover:text-neutral-500 focus-visible:ring-3 md:py-3 md:text-sm 2xl:text-base dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">Pricing</a>
-                <a href="#faq" class="rounded-lg text-base font-medium text-neutral-600 outline-hidden ring-zinc-500 hover:text-neutral-500 focus-visible:ring-3 md:py-3 md:text-sm 2xl:text-base dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">FAQ</a>
-                <a href="{{ url('/contact') }}" class="group inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-yellow-500 px-4 py-3 text-sm font-bold text-neutral-900 ring-zinc-500 transition duration-300 hover:bg-yellow-400 focus-visible:ring-3 outline-hidden active:bg-yellow-500 2xl:text-base dark:ring-zinc-200 dark:focus:outline-hidden">
+                <a href="{{ route('services') }}" class="rounded-lg text-base font-medium text-neutral-600 outline-hidden ring-zinc-500 hover:text-neutral-500 focus-visible:ring-3 md:py-3 md:text-sm 2xl:text-base dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">Services</a>
+                <a href="/projects" class="rounded-lg text-base font-medium text-neutral-600 outline-hidden ring-zinc-500 hover:text-neutral-500 focus-visible:ring-3 md:py-3 md:text-sm 2xl:text-base dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">Projects</a>
+                <a href="/about-us" class="rounded-lg text-base font-medium text-neutral-600 outline-hidden ring-zinc-500 hover:text-neutral-500 focus-visible:ring-3 md:py-3 md:text-sm 2xl:text-base dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">About Us</a>
+                <a href="/contact-us" class="rounded-lg text-base font-medium text-neutral-600 outline-hidden ring-zinc-500 hover:text-neutral-500 focus-visible:ring-3 md:py-3 md:text-sm 2xl:text-base dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">Contact Us</a>
+                <a href="{{ url('/get-a-free-quote') }}" class="group inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-yellow-500 px-4 py-3 text-sm font-bold text-neutral-900 ring-zinc-500 transition duration-300 hover:bg-yellow-400 focus-visible:ring-3 outline-hidden active:bg-yellow-500 2xl:text-base dark:ring-zinc-200 dark:focus:outline-hidden">
                     Get a Free Quote
                 </a>
 
