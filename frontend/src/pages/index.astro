@@ -1,0 +1,147 @@
+---
+// Import the necessary components
+import MainLayout from '@/layouts/MainLayout.astro';
+import HeroSection from '@components/sections/landing/HeroSection.astro';
+import HeroSectionAlt from '@components/sections/landing/HeroSectionAlt.astro';
+import ClientsSection from '@components/sections/landing/ClientsSection.astro';
+import FeaturesGeneral from '@components/sections/features/FeaturesGeneral.astro';
+import FeaturesNavs from '@components/sections/features/FeaturesNavs.astro';
+import TestimonialsSection from '@components/sections/testimonials/TestimonialsSection.astro';
+import PricingSection from '@components/sections/pricing/PricingSection.astro';
+import FAQ from '@components/sections/misc/FAQ.astro';
+import AnnouncementBanner from '@components/ui/banners/AnnouncementBanner.astro';
+import heroImage from '@images/hero-image.avif';
+import faqs from '@data/faqs.json';
+import features from '@data/features.json';
+import pricing from '@data/pricing.json';
+import featureImage from '@images/features-image.avif';
+import construction from '@images/construction-image.avif';
+import tools from '@images/automated-tools.avif';
+import dashboard from '@images/dashboard-image.avif';
+import { partnersData } from '@/data_files/constants';
+
+const avatarSrcs: Array<string> = [
+  'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
+  'https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
+  'https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80',
+  'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
+];
+---
+
+<MainLayout>
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="Get Your Free Solar Quote Today"
+    url="/contact"
+  />
+
+  <HeroSection
+    title=`Power Your Future with <span
+        class="text-yellow-500 dark:text-yellow-400">SunSight Energy</span>`
+    subTitle="Premium solar panel systems, professional installation, and smart energy monitoring — for homes and businesses ready to go solar."
+    primaryBtn="Get a Free Quote"
+    primaryBtnURL="/contact"
+    secondaryBtn="Explore Our Solutions"
+    secondaryBtnURL="/services"
+    withReview={true}
+    avatars={avatarSrcs}
+    rating=`<span class="font-bold">4.9</span> / 5`
+    starCount={5}
+    reviews=`From Over <span class="font-bold">3,200</span> Happy Customers`
+    src={heroImage}
+    alt="Solar panels installed on a modern home rooftop under a bright sunny sky"
+  />
+
+  <ClientsSection
+    title="Trusted by Homeowners & Businesses Across the Region"
+    subTitle="Joining thousands of households and businesses that have made the switch to clean, affordable solar energy."
+    partners={partnersData}
+  />
+
+  <FeaturesGeneral
+    title="Solar Solutions Built Around You"
+    subTitle="At SunSight Energy, we make the transition to solar simple, affordable, and rewarding. From bespoke system design to smart monitoring and ongoing support, we're with you every step of the way."
+    src={featureImage}
+    alt="SunSight Energy solar panel system on a residential rooftop"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title=`Discover how <span class="text-yellow-500 dark:text-yellow-400">SunSight Energy</span> tailors every solar solution to your unique needs.`
+    tabs={[
+      {
+        heading: 'High-Performance Panels',
+        content:
+          "Harness more energy with SunSight's premium monocrystalline solar panels. Engineered for maximum efficiency even in low-light conditions, our panels deliver exceptional output year-round.",
+        svg: 'tools',
+        src: tools,
+        alt: 'Solar panels on a rooftop catching sunlight',
+        first: true,
+      },
+      {
+        heading: 'Smart Energy Dashboard',
+        content:
+          "Monitor your solar production, home consumption, battery levels, and grid exports in real time. Our intuitive app puts full visibility of your energy system right in your pocket.",
+        svg: 'dashboard',
+        src: dashboard,
+        alt: 'Smart energy monitoring dashboard on a tablet screen',
+        second: true,
+      },
+      {
+        heading: 'Battery Storage & Backup',
+        content:
+          "Store your solar energy for use at night or during outages. SunSight battery storage systems keep your home powered around the clock, maximising your independence from the grid.",
+        svg: 'house',
+        src: construction,
+        alt: 'Home battery storage unit installed in a garage',
+      },
+    ]}
+  />
+
+  <TestimonialsSection
+    title="Real Savings. Real People."
+    subTitle="Thousands of SunSight customers are already enjoying lower energy bills and a greener future. Here's what they have to say."
+    ;
+    testimonials={[
+      {
+        content:
+          'Switching to SunSight was the best home investment we have ever made. Our electricity bill dropped by 80% in the first month, and the installation team was professional, fast, and incredibly tidy. Highly recommend!',
+        author: 'Margaret Collins',
+        role: 'Homeowner | Cape Town',
+        avatarSrc:
+          'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80',
+      },
+    ]}
+    statistics={[
+      {
+        count: '3,200+',
+        description:
+          'homes and businesses powered by SunSight solar systems',
+      },
+      {
+        count: '80%',
+        description:
+          'average reduction in electricity bills reported by our customers',
+      },
+      {
+        count: '25yr',
+        description:
+          'performance warranty on all SunSight solar panels',
+      },
+      {
+        count: '4–6 wks',
+        description: 'average time from quote to fully operational solar system',
+      },
+    ]}
+  />
+
+  <PricingSection pricing={pricing} />
+
+  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+
+  <HeroSectionAlt
+    title="Ready to Make the Switch?"
+    subTitle="Join thousands of SunSight customers already saving money and reducing their carbon footprint. Get your personalised solar quote — it's free, fast, and obligation-free."
+    url="/contact"
+  />
+</MainLayout>

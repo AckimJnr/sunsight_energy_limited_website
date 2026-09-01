@@ -1,0 +1,43 @@
+{
+  "title": "Simple, Transparent Solar Packages",
+  "subTitle": "Choose the plan that fits your home or business — no hidden costs, ever.",
+  "badge": "Most popular",
+  "thirdOption": "Large-Scale or Commercial Project?",
+  "btnText": "Get a Custom Quote",
+
+  "starterKit": {
+    "name": "Residential Starter",
+    "description": "Perfect for small homes & apartments",
+    "price": "4,999",
+    "cents": "",
+    "billingFrequency": "USD / full system",
+    "features": [
+      "3kW solar panel system",
+      "Professional installation",
+      "Smart energy monitoring app",
+      "25-year panel warranty",
+      "Grid connection support"
+    ],
+    "purchaseBtnTitle": "Get Started",
+    "purchaseLink": "/contact"
+  },
+
+  "professionalToolbox": {
+    "name": "Premium Home",
+    "description": "Ideal for larger homes & maximum savings",
+    "price": "9,499",
+    "cents": "",
+    "billingFrequency": "USD / full system",
+    "features": [
+      "6kW solar panel system",
+      "10kWh battery storage",
+      "Professional installation",
+      "Smart energy monitoring app",
+      "Priority support & maintenance",
+      "25-year panel warranty",
+      "Grid connection & export support"
+    ],
+    "purchaseBtnTitle": "Go Premium",
+    "purchaseLink": "/contact"
+  }
+}

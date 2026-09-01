@@ -1,0 +1,12 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "wsl.exe",
+            "args": [
+                "/usr/bin/php8.5",
+                "/home/code_is_power/pro/sunsight-energy-ltd/artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}

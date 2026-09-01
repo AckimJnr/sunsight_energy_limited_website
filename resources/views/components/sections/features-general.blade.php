@@ -1,0 +1,69 @@
+{{-- ── Features General Section ─────────────────────────────────────────────── --}}
+<section id="features" class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-16 2xl:max-w-full">
+
+    {{-- Feature image --}}
+    <div class="relative mb-8 overflow-hidden rounded-2xl shadow-xl">
+        <img
+            src="{{ asset('images/features-image.avif') }}"
+            alt="SunSight Energy solar panel system on a residential rooftop"
+            class="h-full w-full object-cover object-center"
+            loading="eager"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/50 to-transparent"></div>
+    </div>
+
+    {{-- Title + Feature blocks --}}
+    <div class="mt-10 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-12">
+        {{-- Title column --}}
+        <div class="lg:col-span-1">
+            <h2 class="text-2xl font-bold text-balance text-neutral-800 md:text-3xl dark:text-neutral-200">
+                Solar Solutions Built Around You
+            </h2>
+            <p class="mt-3 text-pretty text-neutral-600 md:mt-4 dark:text-neutral-400">
+                At SunSight Energy, we make the transition to solar simple, affordable, and rewarding. From bespoke system design to smart monitoring and ongoing support, we're with you every step of the way.
+            </p>
+        </div>
+
+        {{-- Feature grid --}}
+        <div class="lg:col-span-2">
+            <div class="grid gap-8 sm:grid-cols-2 md:gap-10">
+
+                @foreach ([
+                    [
+                        'icon' => '<path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/>',
+                        'heading' => 'Expert Installation Teams',
+                        'content' => 'Our certified solar engineers handle every aspect of your installation — from site survey to final switch-on — with precision and care, ensuring maximum energy output and a clean finish.',
+                    ],
+                    [
+                        'icon' => '<path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/>',
+                        'heading' => 'Proven Cost Savings',
+                        'content' => 'Dramatically reduce your electricity bills from day one. SunSight systems are engineered for peak efficiency, delivering measurable ROI within years, not decades.',
+                    ],
+                    [
+                        'icon' => '<path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/>',
+                        'heading' => 'Smart Energy Monitoring',
+                        'content' => 'Track your solar production, consumption, and savings in real time through our intuitive app. Know exactly what your system is doing — anytime, anywhere.',
+                    ],
+                    [
+                        'icon' => '<path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>',
+                        'heading' => 'Clean, Future-Ready Design',
+                        'content' => 'Our sleek, low-profile solar systems complement your property\'s aesthetics while future-proofing your home with battery storage and EV charger compatibility.',
+                    ],
+                ] as $feature)
+                    <div class="flex gap-4">
+                        <div class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-yellow-100 dark:bg-yellow-900/40">
+                            <svg class="h-5 w-5 text-yellow-600 dark:text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                {!! $feature['icon'] !!}
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-neutral-800 dark:text-neutral-200">{{ $feature['heading'] }}</h3>
+                            <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">{{ $feature['content'] }}</p>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
+    </div>
+</section>

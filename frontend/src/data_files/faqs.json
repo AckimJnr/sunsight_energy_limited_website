@@ -1,0 +1,29 @@
+{
+  "subTitle": "Have questions about going solar? We have answers.",
+  "faqs": [
+    {
+      "question": "How much can I save on my electricity bill with solar panels?",
+      "answer": "Most homeowners see a 50–90% reduction in their monthly electricity bills after installing a SunSight solar system. The exact savings depend on your energy consumption, local utility rates, and system size. Our free energy assessment gives you a personalised projection."
+    },
+    {
+      "question": "How long does the installation process take?",
+      "answer": "A typical residential installation is completed within 1–2 days once permits are approved. Our team handles all paperwork, council approvals, and grid connection applications, so the entire process from sign-off to switch-on usually takes 4–6 weeks."
+    },
+    {
+      "question": "What warranty do your solar panels and systems come with?",
+      "answer": "Our solar panels carry a 25-year performance warranty guaranteeing at least 80% output, and a 12-year product warranty. Inverters come with a 10-year warranty. All installations are backed by our 5-year workmanship guarantee."
+    },
+    {
+      "question": "Do I need a battery storage system?",
+      "answer": "A battery storage system lets you store excess solar energy to use at night or during grid outages, maximising your self-sufficiency. While not required, it dramatically increases your energy independence. We offer flexible packages with and without battery storage to suit your budget and goals."
+    },
+    {
+      "question": "Can my roof handle solar panels?",
+      "answer": "Most roof types — including tile, metal, and flat roofs — are suitable for solar. During our free site assessment, our engineers will evaluate your roof's orientation, pitch, shading, and structural integrity to ensure a safe, optimised installation."
+    },
+    {
+      "question": "Do you offer commercial solar solutions?",
+      "answer": "Absolutely. Our commercial division designs and installs large-scale solar systems for businesses, warehouses, farms, and industrial facilities. We provide detailed ROI analysis, bespoke system design, and ongoing monitoring through our smart dashboard."
+    }
+  ]
+}
