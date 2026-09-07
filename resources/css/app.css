@@ -27,6 +27,14 @@
     @apply text-neutral-900 dark:text-white;
 }
 
+.mission-slides { transition: transform 0.45s ease; }
+.mission-slide { display: block; }
+.mission-slider-dot.active { width: 2rem; }
+
+@media (prefers-reduced-motion: reduce) {
+    .mission-slides { transition: none; }
+}
+
 /* ── Announcement banner transition ───────────────────────────────── */
 #announcement-banner {
     transition: transform 0.3s ease, opacity 0.3s ease;

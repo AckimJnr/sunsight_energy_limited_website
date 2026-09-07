@@ -101,6 +101,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // Activate the first tab by default
     if (tabBtns.length > 0) activateTab(0);
 
+    document.querySelectorAll('.mission-slider').forEach((slider) => {
+        const slides = slider.querySelectorAll('.mission-slide');
+        const dots = slider.querySelectorAll('.mission-slider-dot');
+        let activeIndex = 0;
+
+        const activateSlide = (index) => {
+            activeIndex = (index + slides.length) % slides.length;
+            slider.querySelector('.mission-slides').style.transform = `translateX(-${activeIndex * 100}%)`;
+
+            slides.forEach((slide, slideIndex) => {
+                const isActive = slideIndex === activeIndex;
+                slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+                if (isActive) {
+                    slide.removeAttribute('inert');
+                } else {
+                    slide.setAttribute('inert', '');
+                }
+            });
+
+            dots.forEach((dot, dotIndex) => {
+                const isActive = dotIndex === activeIndex;
+                dot.classList.toggle('active', isActive);
+                dot.classList.toggle('bg-yellow-500', isActive);
+                dot.classList.toggle('bg-neutral-300', !isActive);
+                dot.classList.toggle('dark:bg-neutral-600', !isActive);
+                dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+        };
+
+        activateSlide(0);
+
+        slider.querySelector('.mission-slider-prev')?.addEventListener('click', () => activateSlide(activeIndex - 1));
+        slider.querySelector('.mission-slider-next')?.addEventListener('click', () => activateSlide(activeIndex + 1));
+        dots.forEach((dot, index) => dot.addEventListener('click', () => activateSlide(index)));
+    });
+
     // ── FAQ accordion ───────────────────────────────────────────────────────
     document.querySelectorAll('.faq-item').forEach((item) => {
         const trigger = item.querySelector('.faq-trigger');

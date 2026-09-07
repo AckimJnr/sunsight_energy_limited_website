@@ -7,7 +7,7 @@
     @include('components.sections.hero')
     @include('components.sections.home-page-services')
     @include('components.sections.products')
-    @include('components.sections.clients')
+    @include('components.sections.mission_vision_values')
     @include('components.sections.features-general')
     @include('components.sections.features-tabs')
     @include('components.sections.testimonials')

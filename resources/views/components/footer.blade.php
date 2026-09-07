@@ -1,7 +1,7 @@
 {{-- ── Footer ─────────────────────────────────────────────────────────────────── --}}
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
     <div class="mx-auto w-full max-w-[85rem] px-4 py-10 sm:px-6 lg:px-16 lg:pt-20 2xl:max-w-full">
-        <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
+        <div class="grid grid-cols-2 gap-6 md:grid-cols-5 lg:grid-cols-6">
 
             {{-- Brand Logo --}}
             <div class="col-span-full lg:col-span-1">
@@ -50,7 +50,7 @@
             <div class="col-span-2">
                 <h3 class="font-bold text-neutral-800 dark:text-neutral-200">Stay up to date</h3>
                 <form onsubmit="return false;">
-                    <div class="mt-4 flex flex-col items-center gap-2 rounded-lg bg-neutral-200 p-2 sm:flex-row sm:gap-3 dark:bg-neutral-800">
+                    <div class="mt-0 flex flex-col items-center gap-2 rounded-lg bg-neutral-200 p-2 sm:flex-row sm:gap-3 dark:bg-neutral-800">
                         <div class="w-full">
                             <label for="footer-email-input" class="sr-only">Enter your email</label>
                             <input
