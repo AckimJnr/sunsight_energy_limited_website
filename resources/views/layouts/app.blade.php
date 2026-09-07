@@ -26,13 +26,13 @@
 </head>
 <body class="flex min-h-screen flex-col bg-neutral-200 selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800 antialiased">
 
-    <div class="mx-auto w-full max-w-[85rem] px-4 sm:px-6 lg:px-8 2xl:max-w-full">
+    <div class="mx-auto flex w-full max-w-[85rem] grow flex-col px-4 sm:px-6 lg:px-8 2xl:max-w-full">
         @include('components.navbar')
-    </div>
 
-    <main class="grow">
-        @yield('content')
-    </main>
+        <main class="grow">
+            @yield('content')
+        </main>
+    </div>
 
     @include('components.footer')
 

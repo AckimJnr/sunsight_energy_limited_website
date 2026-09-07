@@ -3,7 +3,7 @@
     {{-- Title and description --}}
     <div class="mx-auto mb-6 w-full space-y-1 text-center sm:w-1/2 lg:w-1/3">
         <h2 class="text-2xl leading-tight font-bold text-balance text-neutral-800 sm:text-3xl dark:text-neutral-200">
-            Trusted by Homeowners &amp; Businesses Across the Region
+            Mission, Vision & Values
         </h2>
         <p class="leading-tight text-pretty text-neutral-600 dark:text-neutral-400">
             Joining thousands of households and businesses that have made the switch to clean, affordable solar energy.

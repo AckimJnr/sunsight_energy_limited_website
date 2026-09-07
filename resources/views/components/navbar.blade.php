@@ -7,7 +7,7 @@
         <div class="flex items-center justify-between">
             {{-- Brand --}}
             <a href="{{ url('/') }}" class="flex items-center rounded-lg ring-zinc-500 outline-hidden focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden" aria-label="SunSight Energy">
-                <img src="{{ asset('images/logoblue.png') }}" alt="SunSight Energy" class="h-12 w-auto object-contain md:h-12 py-1">
+                <img src="{{ asset('images/logoblue.png') }}" alt="SunSight Energy" class="h-auto w-24">
             </a>
 
             {{-- Mobile controls --}}

@@ -6,6 +6,7 @@
     @include('components.sections.announcement')
     @include('components.sections.hero')
     @include('components.sections.home-page-services')
+    @include('components.sections.products')
     @include('components.sections.clients')
     @include('components.sections.features-general')
     @include('components.sections.features-tabs')
